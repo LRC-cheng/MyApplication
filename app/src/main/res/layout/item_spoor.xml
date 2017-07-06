@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="true"
+    android:layout_marginBottom="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/item_business"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/main"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp" />
+
+        <TextView
+            android:id="@+id/tv_item_business_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商家标题"
+            android:textSize="20sp"
+            android:layout_alignTop="@+id/item_business"
+            android:layout_toEndOf="@+id/item_business" />
+
+        <TextView
+            android:id="@+id/tv_item_introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/tv_item_business_title"
+            android:layout_toEndOf="@+id/item_business"
+            android:layout_marginStart="11dp"
+            android:text="描述......."
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_item_pingfen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评分："
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/tv_item_introduce"
+            android:layout_toEndOf="@+id/item_business" />
+
+        <TextView
+            android:id="@+id/tv_item_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textSize="15sp"
+            android:layout_alignBaseline="@+id/tv_item_pingfen"
+            android:layout_alignBottom="@+id/tv_item_pingfen"
+            android:layout_toEndOf="@+id/tv_item_pingfen" />
+
+        <TextView
+            android:id="@+id/tv_item_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址：xxxxxxxxxxxxxxxxxxxxxx"
+            android:textSize="15sp"
+            android:layout_alignBottom="@+id/item_business"
+            android:layout_alignStart="@+id/tv_item_pingfen" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="#e7dede">
+
+    <RelativeLayout
+        android:id="@+id/rl_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/theme">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            android:id="@+id/title_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="商家详情"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img_like"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/like_gray" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_business_picture"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:background="#fff"
+        android:src="@drawable/main"
+        android:layout_below="@+id/rl_main_title"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/ll_score" />
+
+    <RelativeLayout
+        android:id="@+id/rl_introduce"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+
+        android:layout_below="@+id/rl_main_title"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/img_business_picture">
+
+        <TextView
+            android:id="@+id/businessBrief"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="介绍: xxxxxxxxx"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lr_avgscore"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/rl_introduce"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/img_business_picture">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="评分: "
+        android:textSize="15sp"
+        android:id="@+id/textView6"
+        android:layout_alignBaseline="@+id/businessAverageSum"
+        android:layout_alignBottom="@+id/businessAverageSum"
+        android:layout_alignParentStart="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="￥"
+            android:textSize="15sp"
+            android:layout_alignBaseline="@+id/businessAverageSum"
+            android:layout_alignBottom="@+id/businessAverageSum"
+            android:layout_toStartOf="@+id/commentsConsumptionScore"
+            android:id="@+id/textView9" />
+        <TextView
+            android:id="@+id/commentsConsumptionScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textSize="15sp"
+            android:textColor="#ff6f00"
+            android:layout_gravity="center"
+            android:layout_alignBaseline="@+id/textView9"
+            android:layout_alignBottom="@+id/textView9"
+            android:layout_toStartOf="@+id/textView10" />
+    <TextView
+        android:id="@+id/businessAverageSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:textSize="15sp"
+        android:textColor="#ff6f00"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/textView6" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/人"
+            android:id="@+id/textView10"
+            android:layout_marginEnd="47dp"
+            android:layout_alignBaseline="@+id/textView9"
+            android:layout_alignBottom="@+id/textView9"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_address"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/lr_avgscore"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/img_business_picture">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址:"
+            android:textSize="15sp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/businessAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="xxxxxxxxxxxxxxxxx"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_score"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#fff"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/ll_address"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="口味："
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/businessAverageTaste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0.0"
+            android:textColor="#006aff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="环境："
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/businessAverageEnvironment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0.0"
+            android:textColor="#006aff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="服务："
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/businessAverageService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0.0"
+            android:textColor="#006aff"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_businessHour"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/ll_score"
+        android:background="#fff"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="营业时间:"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/businessHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text=" 1:00"
+            android:textColor="#ff0000"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_connect"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/ll_businessHour"
+        android:background="#fff"
+        android:layout_marginTop="1dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="联系方式:"
+            android:textSize="15sp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/businessCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="12345678"
+            android:textColor="#ff657a"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_above="@+id/ll_input"
+        android:layout_below="@+id/ll_connect">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/ll_input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+
+        <Button
+            android:id="@+id/btn_gotoWrite"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="#fd7a00"
+            android:text="写评论"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_weight="0.05">
+
+        <TextView
+            android:id="@+id/item_comment_business_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="商家名"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/item_user_upload_photo"
+            android:layout_width="220dp"
+            android:layout_height="180dp"
+            android:layout_alignEnd="@+id/item_user_com_time"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="56dp"
+            android:src="@drawable/main" />
+
+        <TextView
+            android:id="@+id/item_user_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_user_upload_photo"
+            android:layout_marginBottom="3dp"
+            android:text="用户的评论..........."
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_user_com_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/item_user_upload_photo"
+            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="13dp"
+            android:text="yyyy-mm-dd"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

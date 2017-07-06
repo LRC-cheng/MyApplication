@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginTop="5dp"
+    android:background="#ffffff"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/iv_fooditem_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/main" />
+
+        <TextView
+            android:id="@+id/tv_describe_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="描述"
+            android:textSize="18dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/iv_fooditem_img" />
+
+        <TextView
+            android:id="@+id/tv_describe_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="描述2"
+            android:textSize="15dp"
+            android:layout_alignBottom="@+id/iv_fooditem_img"
+            android:layout_toEndOf="@+id/iv_fooditem_img" />
+
+        <TextView
+            android:id="@+id/tv_describe_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="描述3"
+            android:textSize="15dp"
+            android:layout_marginStart="17dp"
+            android:layout_alignBaseline="@+id/tv_describe_two"
+            android:layout_alignBottom="@+id/tv_describe_two"
+            android:layout_toEndOf="@+id/tv_describe_two" />
+    </RelativeLayout>
+
+</RelativeLayout>
